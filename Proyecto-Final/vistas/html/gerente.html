@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gerente</title>
+    <link rel="stylesheet" href="../css/gerente.css">
+    <script src="https://github.com/soydalto/graficos.git"></script>
+</head>
+<body>
+
+    <nav>
+
+        <ul class="menu">
+            <li><a href="../html/paginaPrincipal.html">Inicio</a></li>
+            <li><a href="../html/compras.html">Carrito</a></li>
+            <li><a href="../html/login.html">Iniciar Sesión</a></li>
+            <li><a href="../html/registro.html">Registrarse</a></li>
+            <li><a href="../html/login.html">Cerrar Sesión</a></li>
+        </ul>
+       </nav>
+
+<form id="formParametros"> 
+
+    <div class="container">
+
+    <div>
+    <label for="">Precio del costo del producto</label>
+    <input type="number" class="valor" placeholder="valor">  
+
+    </div>
+
+<div>
+    <label for="">margen de utilidad</label> &emsp; &emsp; &emsp; &ensp;
+    <input type="number" class="valor" placeholder="valor">  
+</div>
+
+<div>
+    <label for="">precio de venta:</label>&emsp; &emsp; &emsp; &emsp;&emsp;
+    <input type="number" class="valor" placeholder="valor">  
+</div>
+<div>
+    <label for="">utilidad</label>&emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <input type="number" class="valor" placeholder="valor">  
+</div>
+
+
+</div>
+
+<div class="button">
+    <button type="button" class="addParametros"> <strong>Agregar parametros </strong> </button>
+    <button type="button" class="showResults">  <strong>Mostrar resultados</strong>  </button>
+</div>
+
+</form>
+<div id="grafico"></div>
+
+<div><img src="../recursos/utilidad-cardinal.jpg" alt="" width="400"></div>
+<script>  
+
+document.querySelector(".addParametros").addEventListener("click", addParametros);
+document.querySelector(".showResults").addEventListener("click",showResults );
+
+var parametros = [];
+var valores = [];
+
+function addParametros (){
+
+    let html = document.querySelector(".container").innerHTML;
+    let newHtml ='<div><input type="number" class="valor"placeholder="valor"></div>';
+
+    document.querySelector(".container").innerHTML = html + newHtml
+
+
+
+}
+function showResults(){
+
+    for (let i = document.querySelectorAll('.parametro').length - 1; i >= 0; i--) {
+       parametros.push(document.querySelectorAll('.parametro')[i].value);
+       valores.push(parsetInt(document.querySelectorAll(".valor")[i].value));
+        
+    }
+
+var data = [{ 
+
+    x: parametros,
+    y: valores,
+    type: "linear"
+}];
+Plotly.newPlot("grafico", data);
+}
+
+// el codigo no termino funcionando y me salta error en la linea 92, donde comenta que "Plotly" no esta esfinido(no encontre solucion a tiempo)
+
+
+
+
+
+
+</script>
+<footer class="pieDePagina3">
+
+    <h1 class="pieDePagina">ACME</h1>
+<div class="pieDePagina2">derechos reservados &copy; 2019 </div>	<br>
+<div class="pieDePagina2">	email: usuario@gmail.com </div><br>
+<div class="pieDePagina2"> www.acme.com</div><br>
+
+
+
+</footer>
+    
+</body>
+</html>

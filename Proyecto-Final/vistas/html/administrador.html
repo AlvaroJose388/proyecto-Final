@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>administrador</title>
+    <link rel="stylesheet" href="../css/administrador.css">
+</head>
+<body>
+
+    <nav>
+
+        <ul class="menu">
+            <li><a href="../html/paginaPrincipal.html">Inicio</a></li>
+            <li><a href="../html/compras.html">Carrito</a></li>
+            <li><a href="../html/login.html">Iniciar Sesión</a></li>
+            <li><a href="../html/registro.html">Registrarse</a></li>
+            <li><a href="../html/login.html">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+<div >
+<table id="tablaID">
+
+<tr> <th> Producto</th> <th>Costo</th> <th> Venta</th> <th>Ganancia</th><th>ganancia %</th></tr>
+
+
+</table>
+</div>
+<form id="gananciaForm">
+
+    <div>
+<div>
+<label for="productoID">Producto</label>
+<input type="text" id="productoID" name="productoID">
+</div>
+
+
+<div>
+<label for="costoID">Costo</label>&emsp;&ensp;
+<input type="number" name="costoID" id="costoID">
+</div>
+
+<div>
+<label for="ventaID">Venta</label>&emsp;&ensp;
+<input type="number" name="ventaID" id="ventaID">
+</div>
+
+<div>
+<label for="gananciaID">Ganancia</label>
+<input type="number" name="gananciaID" id="gananciaID">
+</div>
+
+<div>
+<label for="ganancia%">ganancia%</label>
+<input type="number" name="ganancia%" id="ganancia%">
+</div>
+
+
+
+<div>
+<button><strong>Definir porcentaje</strong></button>
+</div>
+
+
+    </div>
+
+</form>
+
+
+<script>
+
+const form = document.getElementById("gananciaForm");
+form.addEventListener("submit", function(event){
+        console.log(event);
+        alert("se han registrado los datos")
+        event.preventDefault();
+        let gananciaFormData = new FormData (form);
+        let gananciaTable = document.getElementById("tablaID");
+        let nuevaTablaRow = gananciaTable.insertRow(-1);
+
+        let nuevaTablaCell = nuevaTablaRow.insertCell(0);
+        nuevaTablaCell.textContent = gananciaFormData.get("productoID")
+
+        nuevaTablaCell = nuevaTablaRow.insertCell(1);
+        nuevaTablaCell.textContent = gananciaFormData.get("costoID")
+
+        nuevaTablaCell = nuevaTablaRow.insertCell(2);
+        nuevaTablaCell.textContent = gananciaFormData.get("ventaID")
+
+        nuevaTablaCell = nuevaTablaRow.insertCell(3);
+        nuevaTablaCell.textContent = gananciaFormData.get("gananciaID")
+
+        nuevaTablaCell = nuevaTablaRow.insertCell(4);
+        nuevaTablaCell.textContent = gananciaFormData.get("ganancia%")
+
+
+
+
+
+
+    }
+    )
+</script>
+
+<footer class="pieDePagina3">
+
+    <h1 class="pieDePagina">ACME</h1>
+<div class="pieDePagina2">derechos reservados &copy; 2019 </div>	<br>
+<div class="pieDePagina2">	email: usuario@gmail.com </div><br>
+<div class="pieDePagina2"> www.acme.com</div><br>
+
+
+
+</footer>
+</body>
+</html>

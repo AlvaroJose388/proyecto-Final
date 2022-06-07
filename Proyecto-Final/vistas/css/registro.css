@@ -1,0 +1,88 @@
+body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial, Bebas-Neue;
+	background: #999e9b;
+}
+#general {
+	width: 400px ;
+	height: 500px;
+	background-color: white;
+	text-align: center;
+	padding-top: 45px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	border: solid;
+	margin-bottom: 100px;
+}
+.campos input {
+	height: 25px;
+	width: 250px;
+}
+.menu{
+	list-style: none;
+	padding: 20px;
+	background: #1ac21a;
+	margin: auto;
+	text-align: center;
+	font-weight: bold;
+}
+.menu img{
+	width: 60px;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	display: flex;
+}
+.menu li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 18px;
+	display: black;
+	transition: .3s ease all;
+}
+.menu li{
+	display: inline-block;
+	text-align: center;
+
+}
+.menu li a:hover, 
+.menu li a.activo{
+	color: #FFF;
+
+	background: #000000;
+	border-radius: 6px;
+}
+button {
+	height: 50px;
+	width: 150px;
+}
+select{
+	margin-left: 5px;
+	
+}
+h1{
+	color: #1241c2;
+}
+a {
+	text-decoration: none;
+
+}
+.pieDePagina{
+
+	text-align: left;
+	padding-top: 10px;
+	
+	}
+	.pieDePagina2{
+	
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	.pieDePagina3{
+	
+	background-color: #3498db;
+	
+	}

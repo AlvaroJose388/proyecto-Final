@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <script src="https://github.com/odoo/odoo.git"></script>
+
+    <script>
+
+        function loginUsuario(){
+    
+         var usuario = document.getElementById("usuario").value;
+         var password = document.getElementById("password").value;
+         
+         if (usuario == "cliente" && password == "1234"){
+            window.location.href = "paginaPrincipal.html";
+         }else if (usuario == "admin" && password == "1234"){
+             window.location.href = "administrador.html";
+         }else if(usuario == "vendedor" && password =="1234"){
+            window.location.href ="vendedor.html";
+         }else if (usuario == "gerente" && password == "1234"){
+             window.location.href ="gerente.html";
+         }
+        
+    
+    
+        }
+    
+    
+    
+    
+        </script>
+
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <nav>
+
+              <ul class="menu">
+                  <li><a href="#">Inicio</a></li>
+                  
+                  <li><a href="../html/login.html">Iniciar Sesión</a></li>
+                  <li><a href="../html/registro.html">Registrarse</a></li>
+                  <li><a href="../html/login.html">Cerrar Sesión</a></li>
+              </ul>
+            </nav>
+
+              <div id="general">
+              <div class="campos">
+              <h1>Iniciar Sesión</h1>
+              <br> 
+              <input type="text" placeholder="Usuario" id="usuario">
+              <br> <br>
+              <input type="password" name="" id="password" placeholder="Contraseña">
+            
+               <br> <br>
+              
+              <input type="button" value="Inicio" onclick="loginUsuario()">
+              <br> <br>
+             <a href="../html/registro.html">Registrarse</a>
+            </div>
+        </div>
+        <footer class="pieDePagina3">
+
+            <h1 class="pieDePagina">ACME</h1>
+        <div class="pieDePagina2">derechos reservados &copy; 2019 </div>	<br>
+        <div class="pieDePagina2">	email: usuario@gmail.com </div><br>
+        <div class="pieDePagina2"> www.acme.com</div><br>
+    
+    
+    
+        </footer>
+</body>
+</html>

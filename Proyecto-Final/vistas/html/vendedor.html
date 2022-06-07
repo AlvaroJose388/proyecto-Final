@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vendedor</title>
+    <link rel="stylesheet" href="../css/vendedor.css">
+    
+</head>
+<body>
+
+
+<script>
+
+
+</script>
+
+    <nav>
+
+        <ul class="menu">
+            <li><a href="../html/paginaPrincipal.html">Inicio</a></li>
+            <li><a href="../html/compras.html">Carrito</a></li>
+            <li><a href="../html/login.html">Iniciar Sesión</a></li>
+            <li><a href="../html/registro.html">Registrarse</a></li>
+            <li><a href="../html/login.html">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+
+   <h1>Registro compras vehiculos</h1>
+
+   <form id="pagoForm">  
+
+    <div class="claseForumulario">
+<label for="typeCodigo">Codigo</label>
+<input type="number" id="typeCodigo" name="typeCodigo">
+    </div>
+
+       <div class="claseForumulario">
+     <label for="typeVehiculo">vehiculo</label>
+     <input type="text" id="typeVehiculo" name="typeVehiculo">
+       </div>
+
+ <div class="claseForumulario">
+     <label for="typeMarca">Marca</label>
+     <input type="text" id="typeMarca" name="typeMarca">
+ </div>
+    <div class="claseForumulario">
+       <label for="">Categoria:</label>
+       <input type="radio" id="typePago" name="radioSelect" value="niños">
+       <label for="typePago">niños</label>
+
+       <input type="radio" id="typePago1" name="radioSelect" value="adolecentes">
+       <label for="typePago1">adolecentes</label>
+
+       <input type="radio" id="typePago2" name="radioSelect" value="adultos">
+       <label for="typePago2">Adultos</label>
+    </div>
+       
+    <div class="claseForumulario">
+       <label for="descripcionPago">descripcion</label>
+       <input type="text" id="descripcionPago" name="descripcionPago">
+    </div>
+
+       <div class="claseForumulario">
+       <label for="valorPago">valor:</label>
+       <input type="number" id="valorPago" name="valorPago">
+    </div>
+
+       <div class="claseForumulario">
+       <label for="ivaPago">IVA</label>
+       <input type="number" id="ivaPago" name="ivaPago">
+    </div>
+       
+    <div class="claseForumulario">
+       <label for="impuestosPago">Impuestos al consumo</label>
+       <input type="number" id="impuestosPago" name="impuestosPago">
+    </div>
+
+    <div class="claseForumulario">
+       <label for="valorTotalPago">valor total</label>
+       <input type="number" id="valorTotalPago" name="valorTotalPago">
+    </div>
+
+    <div class="claseForumulario">
+       <button><strong>Añadir datos</strong></button>
+    </div>
+
+
+   </form>
+
+  <div class="tablaLugar">
+   <table id="tablaId">
+       <tr> <th> Codigo</th>  <th> vehiculo</th><th>Marca</th>  <th>Categoria</th>  <th> descripcion</th> <th> valor</th> <th> IVA</th><th> impuestos al consumo</th><th>valor total</th></tr>
+       
+    </table>
+  </div>
+  
+  <script>
+
+    const form = document.getElementById("pagoForm");
+    form.addEventListener("submit", function(event){
+        console.log(event);
+        alert("Se envio el registro")
+        event.preventDefault();
+        let pagoFormData = new FormData (form);
+        let pagoTable = document.getElementById("tablaId");
+        let nuevaTablaRow = pagoTable.insertRow(-1);
+
+        let nuevaTablaCell = nuevaTablaRow.insertCell(0);
+            nuevaTablaCell.textContent = pagoFormData.get("typeCodigo")
+
+            nuevaTablaCell = nuevaTablaRow.insertCell(1);
+            nuevaTablaCell.textContent = pagoFormData.get("typeVehiculo")
+
+            nuevaTablaCell = nuevaTablaRow.insertCell(2);
+            nuevaTablaCell.textContent = pagoFormData.get("typeMarca")
+
+            nuevaTablaCell = nuevaTablaRow.insertCell(3);
+            nuevaTablaCell.textContent = pagoFormData.get("radioSelect")
+
+            nuevaTablaCell = nuevaTablaRow.insertCell(4);
+            nuevaTablaCell.textContent = pagoFormData.get("descripcionPago")
+
+            nuevaTablaCell = nuevaTablaRow.insertCell(5);
+            nuevaTablaCell.textContent = pagoFormData.get("valorPago")
+
+            nuevaTablaCell = nuevaTablaRow.insertCell(6);
+            nuevaTablaCell.textContent = pagoFormData.get("ivaPago")
+
+            nuevaTablaCell = nuevaTablaRow.insertCell(7);
+            nuevaTablaCell.textContent = pagoFormData.get("impuestosPago")
+
+
+            nuevaTablaCell = nuevaTablaRow.insertCell(8);
+            nuevaTablaCell.textContent = pagoFormData.get("valorTotalPago")
+    
+    }
+    )
+</script>
+    
+<footer class="pieDePagina3">
+
+   <h1 class="pieDePagina">ACME</h1>
+<div class="pieDePagina2">derechos reservados &copy; 2019 </div>	<br>
+<div class="pieDePagina2">	email: usuario@gmail.com </div><br>
+<div class="pieDePagina2"> www.acme.com</div><br>
+
+
+
+</footer>
+
+    
+</body>
+</html>

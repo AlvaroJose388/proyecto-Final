@@ -1,0 +1,113 @@
+body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial, Bebas-Neue;
+	background: #999e9b;
+}
+h2{
+	color: #dfd2d2;
+}
+
+.menu{
+	list-style: none;
+	padding: 20px;
+	background: #000000;
+	margin: auto;
+	text-align: center;
+	font-weight: bold;
+}
+.menu img{
+	width: 60px;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	display: flex;
+}
+.menu li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 18px;
+	display: black;
+	transition: .3s ease all;
+}
+.menu li{
+	display: inline-block;
+	text-align: center;
+
+}
+.menu li a:hover, 
+.menu li a.activo{
+	color: #FFF;
+
+	background: #000000;
+	border-radius: 6px;
+}
+
+
+.container{
+	width: 100%;	
+	height: 330px;
+	flex-wrap: wrap;
+	justify-content: center;
+	display: flex;
+	padding-top: 50px;
+	padding-bottom: 950px;
+}
+
+.container .carta{
+	width: 280px;
+	height: 360px;
+	border-radius: 6px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 5.5);
+	overflow: hidden;
+	background-color: #eeeeee;
+	margin: 20px;
+	text-align: center;
+	transition: .3s ease all;
+}
+
+.container .carta:hover{
+	transform: translateY(-15px);
+	box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.container .carta img{
+	width: 330px;
+	height: 220px;
+	margin: auto;
+}
+
+.container .card h4{
+	font-weight: 600;
+}
+
+.container .card p{
+	padding: 0 1rem;
+	font-size: 16px;
+	font-weight: 300;
+	text-align: justify;
+}
+
+.container .card a{
+	font-weight: 400;
+	text-decoration: none;
+	color: #3498db;
+}
+
+.pieDePagina{
+
+text-align: left;
+padding-top: 10px;
+
+}
+.pieDePagina2{
+
+	text-align: center;
+	padding-bottom: 10px;
+}
+.pieDePagina3{
+
+background-color: #3498db;
+
+}
